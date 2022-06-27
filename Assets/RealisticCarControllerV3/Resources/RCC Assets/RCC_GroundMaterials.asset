@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frictions:
   - groundMaterial: {fileID: 13400000, guid: 509c1bbe5810ac84ab6aa68f6523684d, type: 2}
-    forwardStiffness: 1.2
+    forwardStiffness: 1.4
     sidewaysStiffness: 1.2
     slip: 0.275
     damp: 0.4
