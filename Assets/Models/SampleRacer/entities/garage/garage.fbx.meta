@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 410f79ea038b44596abde7838300a120
+timeCreated: 1464171959
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: boxes
+    100002: boxes.001
+    100004: boxes.002
+    100006: boxes.003
+    100008: //RootNode
+    100010: oil_shelf
+    100012: pinboard
+    100014: rolldoors_closed
+    100016: rolldoors_opened
+    100018: tanks_1
+    100020: tanks_2
+    100022: tanks_3
+    100024: tool_shelf_orgenizer
+    100026: toolbox_red_a
+    100028: toolbox_red_b
+    100030: toolshelf_red_a
+    100032: toolshelf_red_a1
+    100034: toolshelf_red_a3
+    100036: toolshelf_yellow_a1
+    100038: warehouse_walls
+    100040: wheel_shelf_a
+    100042: wheel_shelf_b
+    100044: wheel_shelf_c
+    100046: wheels_1
+    100048: wheels_2
+    100050: wheels_4
+    100052: whiteboard
+    100054: workbench_a
+    400000: boxes
+    400002: boxes.001
+    400004: boxes.002
+    400006: boxes.003
+    400008: //RootNode
+    400010: oil_shelf
+    400012: pinboard
+    400014: rolldoors_closed
+    400016: rolldoors_opened
+    400018: tanks_1
+    400020: tanks_2
+    400022: tanks_3
+    400024: tool_shelf_orgenizer
+    400026: toolbox_red_a
+    400028: toolbox_red_b
+    400030: toolshelf_red_a
+    400032: toolshelf_red_a1
+    400034: toolshelf_red_a3
+    400036: toolshelf_yellow_a1
+    400038: warehouse_walls
+    400040: wheel_shelf_a
+    400042: wheel_shelf_b
+    400044: wheel_shelf_c
+    400046: wheels_1
+    400048: wheels_2
+    400050: wheels_4
+    400052: whiteboard
+    400054: workbench_a
+    2300000: boxes
+    2300002: boxes.001
+    2300004: boxes.002
+    2300006: boxes.003
+    2300008: oil_shelf
+    2300010: pinboard
+    2300012: rolldoors_closed
+    2300014: rolldoors_opened
+    2300016: tanks_1
+    2300018: tanks_2
+    2300020: tanks_3
+    2300022: tool_shelf_orgenizer
+    2300024: toolbox_red_a
+    2300026: toolbox_red_b
+    2300028: toolshelf_red_a
+    2300030: toolshelf_red_a1
+    2300032: toolshelf_red_a3
+    2300034: toolshelf_yellow_a1
+    2300036: warehouse_walls
+    2300038: wheel_shelf_a
+    2300040: wheel_shelf_b
+    2300042: wheel_shelf_c
+    2300044: wheels_1
+    2300046: wheels_2
+    2300048: wheels_4
+    2300050: whiteboard
+    2300052: workbench_a
+    3300000: boxes
+    3300002: boxes.001
+    3300004: boxes.002
+    3300006: boxes.003
+    3300008: oil_shelf
+    3300010: pinboard
+    3300012: rolldoors_closed
+    3300014: rolldoors_opened
+    3300016: tanks_1
+    3300018: tanks_2
+    3300020: tanks_3
+    3300022: tool_shelf_orgenizer
+    3300024: toolbox_red_a
+    3300026: toolbox_red_b
+    3300028: toolshelf_red_a
+    3300030: toolshelf_red_a1
+    3300032: toolshelf_red_a3
+    3300034: toolshelf_yellow_a1
+    3300036: warehouse_walls
+    3300038: wheel_shelf_a
+    3300040: wheel_shelf_b
+    3300042: wheel_shelf_c
+    3300044: wheels_1
+    3300046: wheels_2
+    3300048: wheels_4
+    3300050: whiteboard
+    3300052: workbench_a
+    4300000: wheel_shelf_c
+    4300002: wheel_shelf_b
+    4300004: wheel_shelf_a
+    4300006: boxes.003
+    4300008: boxes.002
+    4300010: boxes.001
+    4300012: boxes
+    4300014: whiteboard
+    4300016: tool_shelf_orgenizer
+    4300018: pinboard
+    4300020: oil_shelf
+    4300022: wheels_4
+    4300024: rolldoors_opened
+    4300026: rolldoors_closed
+    4300028: wheels_2
+    4300030: wheels_1
+    4300032: tanks_3
+    4300034: tanks_1
+    4300036: tanks_2
+    4300038: workbench_a
+    4300040: toolshelf_red_a
+    4300042: toolshelf_red_a1
+    4300044: toolbox_red_b
+    4300046: toolbox_red_a
+    4300048: toolshelf_yellow_a1
+    4300050: toolshelf_red_a3
+    4300052: warehouse_walls
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: misc_asphalt_45d
+    second: {fileID: 2100000, guid: 528b10df9b647954c85f15b16fbd130d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: misc_concrete_new
+    second: {fileID: 2100000, guid: e766f06d412c0ac4dbb6e74bf4c1e591, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: misc_drain
+    second: {fileID: 2100000, guid: 170f455cee7f02a459bc585e5c7fa873, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_atlas_a
+    second: {fileID: 2100000, guid: f403032e0a72b784a89e49e20acb4ec1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_atlas_b
+    second: {fileID: 2100000, guid: 9f885a002fa01754789ed9d5360757b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_beam_a
+    second: {fileID: 2100000, guid: ff1aacdc4da5c794f8f6b894cfe765cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_cardbox
+    second: {fileID: 2100000, guid: d8be06db331eeff468384033e2341126, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_ceiling_conc
+    second: {fileID: 2100000, guid: 74bc8b63c8b6497429f09cb0bfb5542d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_floor
+    second: {fileID: 2100000, guid: 466c9bcd272b2ab4d9c6528be5f63fff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_floor_metal
+    second: {fileID: 2100000, guid: 58a4fb54d3a111a4ebf5b1cc6f045eae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_oilshelfs
+    second: {fileID: 2100000, guid: a0ef24cd7720d6742a761963fd351d73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_oilshelfs_wood
+    second: {fileID: 2100000, guid: bd1a9be1b64059d4bab79264fa0e40e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_pinboard
+    second: {fileID: 2100000, guid: e5a84a3ad70a93b4db32cc88ff9fc3a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_rollupdoor
+    second: {fileID: 2100000, guid: 05215235b888d8b47bcd076fa4e58c6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_shelfswheel
+    second: {fileID: 2100000, guid: 11badc8179b000042bbc3eb4575757ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_toolshelf_orgenizer
+    second: {fileID: 2100000, guid: 168355c6d638483458a0e797454332d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_toostorage
+    second: {fileID: 2100000, guid: ab55f2e4d71e341bea40d9e5d93015a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_topdoors_a
+    second: {fileID: 2100000, guid: 286581ecb5e99ac47ba556c4fc849dc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_topdoors_b
+    second: {fileID: 2100000, guid: 4f15364ba5a1a1247a3f8fe59285aae5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wall_brick
+    second: {fileID: 2100000, guid: d15fb7be2d6234811a90b9bd604cc346, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wall_plaster
+    second: {fileID: 2100000, guid: ffa120d84c375dc4a87421fe33abe064, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wheel_a
+    second: {fileID: 2100000, guid: d197fbdebd8ce4a4992f2dff74639342, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wheel_c
+    second: {fileID: 2100000, guid: 79249b28c2303e544a6e8b290bc5e99a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wheel_d
+    second: {fileID: 2100000, guid: 85417bf8392fbf843bed7f66027e8176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wheel_loop
+    second: {fileID: 2100000, guid: 300785b375874f845aa3cb149836644f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_whiteboard
+    second: {fileID: 2100000, guid: 3de4f1dffbd7ae0409d656026eb9d39c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_window
+    second: {fileID: 2100000, guid: e065a6595ae0ab14c9659ced9b5b021d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wood_a
+    second: {fileID: 2100000, guid: 8813b470bd3eb69419dd8b6371afc7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: warehouse_wood_b
+    second: {fileID: 2100000, guid: 2f8c0ee1656e43f48bbc26fc53af19d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: waterfront_warehouse_wall
+    second: {fileID: 2100000, guid: 4e9d5c30774a94f489adc056dd939982, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: waterfront_warehouse_window_small
+    second: {fileID: 2100000, guid: da231e0deef724d48b413299a4652c59, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

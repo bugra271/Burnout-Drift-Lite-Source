@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ccf35bdd5db3845a82b03eb6baf4f3, type: 3}
+  m_Name: SelectableWheels
+  m_EditorClassIdentifier: 
+  wheels:
+  - wheel: {fileID: 1000011647590452, guid: 3c44cdf2ce4e5b643b50a324c7699490, type: 3}
+    unlocked: 0
+    price: 1500
+  - wheel: {fileID: 1000010978205898, guid: c4021b094bdf5ae498467be20388013d, type: 3}
+    unlocked: 0
+    price: 1500
+  - wheel: {fileID: 1000010639464714, guid: 9dd7f2740f67d484d89757650db5052d, type: 3}
+    unlocked: 0
+    price: 1500
+  - wheel: {fileID: 1000010272325198, guid: 77c973f962d58a04a8fcf65c303be756, type: 3}
+    unlocked: 0
+    price: 1500
+  - wheel: {fileID: 1000013675684938, guid: 73679220198dbfe47862e49e5417e779, type: 3}
+    unlocked: 0
+    price: 1500
+  - wheel: {fileID: 1000011332336838, guid: 5c2094fc69a9f9e41bf40836449b7cb5, type: 3}
+    unlocked: 0
+    price: 1500

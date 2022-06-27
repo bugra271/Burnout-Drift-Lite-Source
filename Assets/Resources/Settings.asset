@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad81504f5b66a74b8524b394fd5842f, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  driftPointsMP: 500
+  driftTime: 2
+  resetDriftPointsAfterCollision: 1
+  minimumCollision: 5
+  countingPointsAudioClip: {fileID: 8300000, guid: 5e948e4f667a0c64b83c1cc3181fd318,
+    type: 3}
+  labelSlideAudioClip: {fileID: 8300000, guid: 11bbaf94dbf804d4a9a438175c9fd5a4, type: 3}
+  crashedAudioClips:
+  - {fileID: 8300000, guid: a356826a9575a884a8fda67d466c9539, type: 3}
+  - {fileID: 8300000, guid: e219f4ba613916242bc11dd9df5a7448, type: 3}
+  - {fileID: 8300000, guid: 547b14d29ae56c14b9b4e5b59419b0ae, type: 3}
+  - {fileID: 8300000, guid: 4d320ffab649e654c87018d582222bbf, type: 3}
+  - {fileID: 8300000, guid: 2c3b8339e0255e446924fc5e36396f53, type: 3}
+  - {fileID: 8300000, guid: 18de4fef0ff9d2049ad10023aced5649, type: 3}
