@@ -619,7 +619,7 @@ public class RCC_WheelCollider : RCC_Core {
     private void Drift() {
 
         Vector3 relativeVelocity = transform.InverseTransformDirection(rigid.velocity);
-        float sqrVel = (relativeVelocity.x * relativeVelocity.x) / 100f;
+        float sqrVel = (relativeVelocity.x * relativeVelocity.x) / 50f;
 
         if (wheelHit.forwardSlip > 0)
             sqrVel += (Mathf.Abs(wheelHit.forwardSlip) * .85f);

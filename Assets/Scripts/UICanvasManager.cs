@@ -23,6 +23,7 @@ public class UICanvasManager : MonoBehaviour {
 	public Text currentPoints;
 	public Text currentCoins;
 	public Text currentMP;
+	public Text totalDiamonds;
 
 	public Text countDown;
 
@@ -50,6 +51,9 @@ public class UICanvasManager : MonoBehaviour {
 	public Text bestScore2;
 	public Text bestScore3;
 
+	public Text speeding;
+	public Text jump;
+
 	void Awake(){
 		
 		canvas = GetComponent<Canvas> ();
@@ -71,7 +75,7 @@ public class UICanvasManager : MonoBehaviour {
 		GameplayManager.OnRaceStarted += GameplayManager_OnRaceStarted;
 		GameplayManager.OnRaceFinished += GameplayManager_OnRaceFinished;
 		GameplayManager.OnRacePaused += GameplayManager_OnRacePaused;
-		PlayerManager.OnScoreAchieved += PlayerManager_OnScoreAchieved;
+		PlayerManager.OnDriftScoreAchieved += PlayerManager_OnScoreAchieved;
 
 		StopAllCoroutines();
 		StartCoroutine("LateDisplay");
@@ -94,7 +98,7 @@ public class UICanvasManager : MonoBehaviour {
 
 		for (int i = 0; i < allScores.Count; i++) {
 
-			if (Player.totalDriftPoints >= allScores [i]) {
+			if (Player.totalPoints >= allScores [i]) {
 
 				switch (i) {
 
@@ -254,6 +258,16 @@ public class UICanvasManager : MonoBehaviour {
 		if (!player)
 			return;
 
+		if (player.curAirPonts != 0)
+			jump.text = "Flying!\n" + player.curAirPonts.ToString("F0");
+		else
+			jump.text = "";
+
+		if (player.curSpeedingPonts != 0)
+			speeding.text = "Speed Ticket!\n" + player.curSpeedingPonts.ToString("F0");
+		else
+			speeding.text = "";
+
 	}
 
 	IEnumerator LateDisplay () {
@@ -264,10 +278,11 @@ public class UICanvasManager : MonoBehaviour {
 
 			if (player) {
 
-				totalPoints.text = player.totalDriftPoints.ToString ("F0");
+				totalPoints.text = player.totalPoints.ToString ("F0");
 				currentPoints.text = player.currentDriftPoints.ToString ("F0");
 				currentCoins.text = player.currentCoins.ToString ("F0");
 				currentMP.text = player.currentMP.ToString () + " X";
+				totalDiamonds.text = BurnoutAPI.GetDiamond().ToString();
 
 				if (player.driftingTime > 0) {
 
@@ -325,7 +340,7 @@ public class UICanvasManager : MonoBehaviour {
 		GameplayManager.OnPlayerSpawned -= GameplayManager_OnPlayerSpawned;
 		GameplayManager.OnRaceStarted -= GameplayManager_OnRaceStarted;
 		GameplayManager.OnRaceFinished -= GameplayManager_OnRaceFinished;
-		PlayerManager.OnScoreAchieved -= PlayerManager_OnScoreAchieved;
+		PlayerManager.OnDriftScoreAchieved -= PlayerManager_OnScoreAchieved;
 		GameplayManager.OnRacePaused -= GameplayManager_OnRacePaused;
 
 	}

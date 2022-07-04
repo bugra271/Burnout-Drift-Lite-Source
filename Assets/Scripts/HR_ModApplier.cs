@@ -22,103 +22,94 @@ public class HR_ModApplier : MonoBehaviour {
 	internal GameObject selectedWheel;
 	internal int wheelIndex;
 
-	//---------------------------//
+    //---------------------------//
 
-//	private int _speedLevel = 0;
-//	public int speedLevel
-//	{
-//		get
-//		{
-//			return _speedLevel;
-//		}
-//		set
-//		{
-//			if(value <= 5)
-//				_speedLevel = value;
-//		}
-//	}
-//
-//	private int _handlingLevel = 0;
-//	public int handlingLevel
-//	{
-//		get
-//		{
-//			return _handlingLevel;
-//		}
-//		set
-//		{
-//			if(value <= 5)
-//				_handlingLevel = value;
-//		}
-//	}
-//
-//	private int _brakeLevel = 0;
-//	public int brakeLevel
-//	{
-//		get
-//		{
-//			return _brakeLevel;
-//		}
-//		set
-//		{
-//			if(value <= 5)
-//				_brakeLevel = value;
-//		}
-//	}
-//	
-//	private float defMaxSpeed;
-//	private float defHandling;
-//	private float defMaxBrake;
-//
-//	public float maxUpgradeSpeed;
-//	public float maxUpgradeHandling;
-//	public float maxUpgradeBrake;
+    private int _speedLevel = 0;
+    public int speedLevel {
+        get {
+            return _speedLevel;
+        }
+        set {
+            if (value <= 5)
+                _speedLevel = value;
+        }
+    }
 
-	void Awake () {
+    private int _handlingLevel = 0;
+    public int handlingLevel {
+        get {
+            return _handlingLevel;
+        }
+        set {
+            if (value <= 5)
+                _handlingLevel = value;
+        }
+    }
+
+    private int _brakeLevel = 0;
+    public int brakeLevel {
+        get {
+            return _brakeLevel;
+        }
+        set {
+            if (value <= 5)
+                _brakeLevel = value;
+        }
+    }
+
+    private float defMaxSpeed;
+    private float defHandling;
+    private float defMaxBrake;
+
+    public float maxUpgradeSpeed = 360f;
+    public float maxUpgradeHandling = .5f;
+    public float maxUpgradeBrake = 3500f;
+
+    void Awake () {
 
 		carController = GetComponent<RCC_CarControllerV3>();
 
-//		defMaxSpeed = carController.maxspeed;
-//		defHandling = carController.highspeedsteerAngle;
-//		defMaxBrake = carController.brakeTorque;
+        defMaxSpeed = carController.maxspeed;
+        defHandling = carController.tractionHelperStrength;
+        defMaxBrake = carController.brakeTorque;
 
-		if (PlayerPrefs.HasKey (transform.name + "SelectedWheel")) {
+        if (PlayerPrefs.HasKey (transform.name + "SelectedWheel")) {
 			wheelIndex = PlayerPrefs.GetInt (transform.name + "SelectedWheel", 0);
 			selectedWheel = SelectableWheels.Instance.wheels [wheelIndex].wheel;
 		} else {
 			selectedWheel = null;
 		}
 
-//		_speedLevel = PlayerPrefs.GetInt(transform.name + "SpeedLevel");
-//		_handlingLevel = PlayerPrefs.GetInt(transform.name + "HandlingLevel");
-//		_brakeLevel = PlayerPrefs.GetInt(transform.name + "BrakeLevel");
+        _speedLevel = PlayerPrefs.GetInt(transform.name + "SpeedLevel");
+        _handlingLevel = PlayerPrefs.GetInt(transform.name + "HandlingLevel");
+        _brakeLevel = PlayerPrefs.GetInt(transform.name + "BrakeLevel");
 
-		bodyColor = RCC_PlayerPrefsX.GetColor(transform.name + "BodyColor", Color.white);
+        bodyColor = RCC_PlayerPrefsX.GetColor(transform.name + "BodyColor", Color.black);
 
 	}
 
 	void OnEnable(){
 
-//		HR_ModificationUpgrade[] mods = GameObject.FindObjectsOfType<HR_ModificationUpgrade>();
-//
-//		for (int i = 0; i < mods.Length; i++) {
-//
-//			mods[i].applier = GetComponent<HR_ModApplier>();
-//
-//		}
-		
-		UpdateStats();
-//		CheckGroundGap ();
+        HR_ModificationUpgrade[] mods = GameObject.FindObjectsOfType<HR_ModificationUpgrade>();
 
-	}
+        for (int i = 0; i < mods.Length; i++) {
+
+            mods[i].applier = GetComponent<HR_ModApplier>();
+
+        }
+
+        UpdateStats();
+        CheckGroundGap();
+
+    }
 
 	public void UpdateStats (){
 
-//		carController.maxspeed = Mathf.Lerp(defMaxSpeed, maxUpgradeSpeed, _speedLevel / 5f);
-//		carController.highspeedsteerAngle = Mathf.Lerp(defHandling, maxUpgradeHandling, _handlingLevel / 5f);
-//		carController.brakeTorque = Mathf.Lerp(defMaxBrake, maxUpgradeBrake, _brakeLevel / 5f);
+        carController.maxspeed = Mathf.Lerp(defMaxSpeed, maxUpgradeSpeed, _speedLevel / 5f);
+        carController.tractionHelperStrength = Mathf.Lerp(defHandling, maxUpgradeHandling, _handlingLevel / 5f);
+        carController.brakeTorque = Mathf.Lerp(defMaxBrake, maxUpgradeBrake, _brakeLevel / 5f);
 
-		if(bodyRenderer)
+        if (bodyRenderer)
 			bodyRenderer.sharedMaterials[bodyRendererMaterialIndex].color = bodyColor;
 		else
 			Debug.LogError("Missing Body Renderer On ModApllier Component");
@@ -139,25 +130,28 @@ public class HR_ModApplier : MonoBehaviour {
 
 		}
 
-//		PlayerPrefs.SetInt(transform.name + "SpeedLevel", _speedLevel);
-//		PlayerPrefs.SetInt(transform.name + "HandlingLevel", _handlingLevel);
-//		PlayerPrefs.SetInt(transform.name + "BrakeLevel", _brakeLevel);
-		RCC_PlayerPrefsX.SetColor(transform.name + "BodyColor", bodyColor);
+        PlayerPrefs.SetInt(transform.name + "SpeedLevel", _speedLevel);
+        PlayerPrefs.SetInt(transform.name + "HandlingLevel", _handlingLevel);
+        PlayerPrefs.SetInt(transform.name + "BrakeLevel", _brakeLevel);
+        RCC_PlayerPrefsX.SetColor(transform.name + "BodyColor", bodyColor);
+
+        if (MainMenuManager.Instance)
+            MainMenuManager.Instance.UpdateStats(carController);
 	
 	}
 
 	void Update(){
 
-//		if(maxUpgradeSpeed < carController.maxspeed)
-//			maxUpgradeSpeed = carController.maxspeed;
-//
-//		if(maxUpgradeHandling < carController.highspeedsteerAngle)
-//			maxUpgradeHandling = carController.highspeedsteerAngle;
-//
-//		if(maxUpgradeBrake < carController.brakeTorque)
-//			maxUpgradeBrake = carController.brakeTorque;
+        if (maxUpgradeSpeed < carController.maxspeed)
+            maxUpgradeSpeed = carController.maxspeed;
 
-	}
+        if (maxUpgradeHandling < carController.tractionHelperStrength)
+            maxUpgradeHandling = carController.tractionHelperStrength;
+
+        if (maxUpgradeBrake < carController.brakeTorque)
+            maxUpgradeBrake = carController.brakeTorque;
+
+    }
 
 	void CheckGroundGap(){
 

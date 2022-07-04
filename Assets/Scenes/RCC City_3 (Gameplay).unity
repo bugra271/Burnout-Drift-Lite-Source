@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 99fb1b8998a83ac40aab660bc1f8dcb2, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05771125, g: 0.06817257, b: 0.07352307, a: 1}
+  m_IndirectSpecularColor: {r: 0.05782184, g: 0.068374194, b: 0.07354193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -5103,7 +5103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 5014982}
-  gameType: 0
+  gameType: 1
   raceStarted: 0
   countDown: 5
   introCamera: {fileID: 65600910}
@@ -8065,6 +8065,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 759620218}
+    - target: {fileID: 114686043652314360, guid: 64769b5f7921461469669f687d2bf17a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 759620218}
+    - target: {fileID: 114686043652314360, guid: 64769b5f7921461469669f687d2bf17a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FinishRace
+      objectReference: {fileID: 0}
     - target: {fileID: 114828103018366278, guid: 64769b5f7921461469669f687d2bf17a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8204,11 +8214,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224877138528169294, guid: 64769b5f7921461469669f687d2bf17a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0024414062
       objectReference: {fileID: 0}
     - target: {fileID: 3141349556812649978, guid: 64769b5f7921461469669f687d2bf17a,
         type: 3}

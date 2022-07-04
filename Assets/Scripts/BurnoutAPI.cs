@@ -5,15 +5,21 @@ using UnityEngine;
 
 public class BurnoutAPI {
 
-	public delegate void onPlayerCoinsChanged(int changeAmount);
+	public delegate void onPlayerCoinsChanged();
 	public static event onPlayerCoinsChanged OnPlayerCoinsChanged;
 
 	public static int GetCurrency () {
 
-		return PlayerPrefs.GetInt("Currency", 10000);
+		return PlayerPrefs.GetInt("Currency", 1000000);
 
 	}
-	
+
+	public static int GetDiamond() {
+
+		return PlayerPrefs.GetInt("Diamond", 1);
+
+	}
+
 	public static void ConsumeCurrency (int consume) {
 
 		int current = GetCurrency();
@@ -21,7 +27,7 @@ public class BurnoutAPI {
 		PlayerPrefs.SetInt ("Currency", current - consume);
 
 		if(OnPlayerCoinsChanged != null)
-			OnPlayerCoinsChanged (-consume);
+			OnPlayerCoinsChanged ();
 
 	}
 
@@ -32,9 +38,31 @@ public class BurnoutAPI {
 		PlayerPrefs.SetInt ("Currency", current + add);
 
 		if(OnPlayerCoinsChanged != null)
-			OnPlayerCoinsChanged (add);
+			OnPlayerCoinsChanged ();
 
 	}
+
+	public static void ConsumeDiamond(int consume) {
+
+		int current = GetDiamond();
+
+		PlayerPrefs.SetInt("Diamond", current - consume);
+
+        if (OnPlayerCoinsChanged != null)
+            OnPlayerCoinsChanged();
+
+    }
+
+	public static void AddDiamond(int add) {
+
+		int current = GetDiamond();
+
+		PlayerPrefs.SetInt("Diamond", current + add);
+
+        if (OnPlayerCoinsChanged != null)
+            OnPlayerCoinsChanged();
+
+    }
 
 	public static string[] GetUnlockedVehicles () {
 

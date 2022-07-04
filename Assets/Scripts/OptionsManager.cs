@@ -43,27 +43,31 @@ public class OptionsManager : MonoBehaviour {
 
 	void OnEnable(){
 
-		if (RCC_Settings.Instance.mobileControllerEnabled) {
+		if (touch && tilt && joystick) {
 
-			if (PlayerPrefs.GetInt ("ControllerType", 0) == 0) {
-				touch.isOn = true;
-				tilt.isOn = false;
-				joystick.isOn = false;
-			}
-			if (PlayerPrefs.GetInt ("ControllerType", 0) == 1) {
-				touch.isOn = false;
-				tilt.isOn = true;
-				joystick.isOn = false;
-			}
-			if (PlayerPrefs.GetInt ("ControllerType", 0) == 3) {
-				touch.isOn = false;
-				tilt.isOn = false;
-				joystick.isOn = true;
+			if (RCC_Settings.Instance.mobileControllerEnabled) {
+
+				if (PlayerPrefs.GetInt("ControllerType", 0) == 0) {
+					touch.isOn = true;
+					tilt.isOn = false;
+					joystick.isOn = false;
+				}
+				if (PlayerPrefs.GetInt("ControllerType", 0) == 1) {
+					touch.isOn = false;
+					tilt.isOn = true;
+					joystick.isOn = false;
+				}
+				if (PlayerPrefs.GetInt("ControllerType", 0) == 3) {
+					touch.isOn = false;
+					tilt.isOn = false;
+					joystick.isOn = true;
+				}
+
 			}
 
 		}
 
-		if (QualitySettings.GetQualityLevel () == 0) {
+        if (QualitySettings.GetQualityLevel () == 0) {
 			low.isOn = true;
 			high.isOn = false;
 			med.isOn = false;
@@ -113,8 +117,10 @@ public class OptionsManager : MonoBehaviour {
 	public void SetControllerType(Toggle toggle){
 
 		if (toggle.isOn) {
+
 			toggle.isOn = false;
 			return;
+
 		}
 
 		switch(toggle.name){

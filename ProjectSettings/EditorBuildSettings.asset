@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RCC City_1 (Gameplay).unity
     guid: 5545869ad94ba584c810cb46428c60d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RCC City_2 (Gameplay).unity
     guid: 59f7f1d9719141c468f47e9bd3aec65b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RCC City_3 (Gameplay).unity
     guid: bf8c7db25b28a814a9a1f6350020d7df
   m_configObjects: {}

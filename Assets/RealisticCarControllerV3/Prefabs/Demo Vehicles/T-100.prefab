@@ -5222,6 +5222,7 @@ MonoBehaviour:
   allWheelColliders: []
   hasExtraWheels: 0
   overrideWheels: 0
+  overrideAllWheels: 0
   poweredWheels: 0
   configureVehicleSubsteps:
     speedThreshold: 10
@@ -8800,7 +8801,7 @@ MonoBehaviour:
   drawSkid: 1
   wheelPosition: {x: 0, y: 0, z: 0}
   wheelRotation: {x: 0, y: 0, z: 0, w: 1}
-  canPower: 0
+  canPower: 1
   powerMultiplier: 1
   canSteer: 1
   steeringMultiplier: 1
@@ -9481,7 +9482,7 @@ MonoBehaviour:
   drawSkid: 1
   wheelPosition: {x: 0, y: 0, z: 0}
   wheelRotation: {x: 0, y: 0, z: 0, w: 1}
-  canPower: 0
+  canPower: 1
   powerMultiplier: 1
   canSteer: 1
   steeringMultiplier: 1

@@ -63,6 +63,7 @@ public class PlayerCarsEditor : Editor {
                 if (asset.playerCars != null && asset.playerCars[i] != null && asset.playerCars[i].car) {
 
                     asset.playerCars[i].price = EditorGUILayout.IntField("Price", asset.playerCars[i].price, GUILayout.MaxWidth(150f));
+                    asset.playerCars[i].diamond = EditorGUILayout.IntField("Diamond", asset.playerCars[i].diamond, GUILayout.MaxWidth(150f));
 
                 }
 

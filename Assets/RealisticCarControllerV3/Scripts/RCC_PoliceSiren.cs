@@ -14,19 +14,11 @@ using UnityEngine;
 [AddComponentMenu("BoneCracker Games/Realistic Car Controller/Misc/RCC Police Siren")]
 public class RCC_PoliceSiren : MonoBehaviour {
 
-	private RCC_AICarController AI;
-
-	public SirenMode sirenMode;
+	public SirenMode sirenMode = SirenMode.On;
 	public enum SirenMode{Off, On}
 
 	public Light[] redLights;
 	public Light[] blueLights;
-
-	void Start () {
-
-		AI = GetComponentInParent<RCC_AICarController> ();
-		
-	}
 
 	void Update () {
 
@@ -69,15 +61,6 @@ public class RCC_PoliceSiren : MonoBehaviour {
 			}
 
 			break;
-
-		}
-
-		if (AI) {
-
-			if (AI.targetChase != null)
-				sirenMode = SirenMode.On;
-			else
-				sirenMode = SirenMode.Off;
 
 		}
 		

@@ -240,7 +240,7 @@ MonoBehaviour:
   uiType: 0
   useTelemetry: 0
   mobileController: 0
-  mobileControllerEnabled: 0
+  mobileControllerEnabled: 1
   UIButtonSensitivity: 10
   UIButtonGravity: 10
   gyroSensitivity: 2

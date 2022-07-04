@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 8
+  m_Name: AlienSun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b6679336c128b459f37ee207e8c880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Atlas: {fileID: 11400000, guid: cb9d833d9a9304870b9f6bad04ea93e3, type: 3}
+  FlareBatches:
+  - {fileID: 0}
+  EditingAtlas: 0
+  isVisible: 1
+  Elements:
+  - Editing: 0
+    Visible: 1
+    elementTextureID: 0
+    SpriteName: Caustic_Abstract_06
+    flare: {fileID: 11400000}
+    flareAtlas: {fileID: 11400000, guid: cb9d833d9a9304870b9f6bad04ea93e3, type: 3}
+    Brightness: 1
+    Scale: 1
+    ScaleRandom: 0
+    ScaleFinal: 1
+    RandomColorAmount: {x: 0, y: 0, z: 0, w: 0}
+    position: -1
+    useRangeOffset: 0
+    SubElementPositionRange_Min: -1
+    SubElementPositionRange_Max: 1
+    SubElementAngleRange_Min: -180
+    SubElementAngleRange_Max: 180
+    OffsetPosition: {x: 0, y: 0, z: 0}
+    Anamorphic: {x: 0, y: 0, z: 0}
+    OffsetPostion: {x: 0, y: 0, z: 0}
+    angle: 0
+    FinalAngle: 0
+    useRandomAngle: 0
+    useStarRotation: 0
+    AngleRandom_Min: 0
+    AngleRandom_Max: 0
+    OrientToSource: 0
+    rotateToFlare: 0
+    rotationSpeed: 0
+    rotationOverTime: 0
+    useColorRange: 0
+    ElementFinalColor: {r: 0, g: 0, b: 0, a: 0}
+    ElementTint: {r: 1, g: 1, b: 1, a: 0.33}
+    SubElementColor_Start: {r: 1, g: 1, b: 1, a: 1}
+    SubElementColor_End: {r: 1, g: 1, b: 1, a: 1}
+    useScaleCurve: 0
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    OverrideDynamicEdgeBoost: 0
+    DynamicEdgeBoostOverride: 1
+    OverrideDynamicCenterBoost: 0
+    DynamicCenterBoostOverride: 1
+    OverrideDynamicEdgeBrightness: 0
+    DynamicEdgeBrightnessOverride: 0.4
+    OverrideDynamicCenterBrightness: 0
+    DynamicCenterBrightnessOverride: 0.4
+    subElements: []
+    size: {x: 1, y: 1}
+    EditDynamicTriggering: 0
+    EditOcclusion: 0
+    ElementSetting: 0
+    OffsetSetting: 0
+    ColorSetting: 0
+    ScaleSetting: 0
+    RotationSetting: 0
+    OverrideSetting: 0
+    colorTexture: {fileID: 0}
+    colorTextureDirty: 0
+    type: 0
+  thisTransform: {fileID: 0}
+  thisGameObject: {fileID: 0}
+  LensPosition: {x: 0, y: 0, z: 0}
+  EditGlobals: 0
+  GlobalScale: 100
+  MultiplyScaleByTransformScale: 0
+  GlobalBrightness: 1
+  GlobalTintColor: {r: 1, g: 1, b: 1, a: 1}
+  useMaxDistance: 1
+  useDistanceScale: 1
+  useDistanceFade: 1
+  GlobalMaxDistance: 150
+  UseAngleLimit: 0
+  maxAngle: 90
+  UseAngleScale: 0
+  UseAngleBrightness: 1
+  UseAngleCurve: 0
+  AngleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  RaycastPhysics: 0
+  Occluded: 0
+  OccludeScale: 1
+  pixelBasedOcclusion: 0
+  pixelLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967039
+  occlusionScaleSpeed: 4
+  occlusionBrightnessSpeed: 32
+  OccludingObject: {fileID: 0}
+  EditDynamicTriggering: 0
+  EditOcclusion: 0
+  IoSetting: 0
+  OffScreenFadeDist: 0.2
+  useDynamicEdgeBoost: 0
+  DynamicEdgeBoost: 1
+  DynamicEdgeBrightness: 0.1
+  DynamicEdgeRange: 0.3
+  DynamicEdgeBias: -0.1
+  DynamicEdgeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  useDynamicCenterBoost: 0
+  DynamicCenterBoost: 1
+  DynamicCenterBrightness: 0.2
+  DynamicCenterRange: 0.3
+  DynamicCenterBias: 0
+  neverCull: 0
+  sunMode: 0
+  sunModeTransformA: {fileID: 0}
+  sunModeTransformB: {fileID: 0}
+  DisabledPlayMode: 0

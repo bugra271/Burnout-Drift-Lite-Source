@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bl_CameraOrbit : bl_CameraBase
-{
+public class bl_CameraOrbit : bl_CameraBase {
     [HideInInspector]
     public bool m_Interact = true;
 
@@ -12,7 +11,7 @@ public class bl_CameraOrbit : bl_CameraBase
     public bool isForMobile = false;
     public bool AutoTakeInfo = true;
     public float Distance = 5f;
-    [Range(0.01f, 5)]public float SwichtSpeed = 2;
+    [Range(0.01f, 5)] public float SwichtSpeed = 2;
     public Vector2 DistanceClamp = new Vector2(1.5f, 5);
     public Vector2 YLimitClamp = new Vector2(-20, 80);
     public Vector2 SpeedAxis = new Vector2(100, 100);
@@ -57,7 +56,7 @@ public class bl_CameraOrbit : bl_CameraBase
     public float CollisionRadius = 2;
     [Header("Fade")]
     public bool FadeOnStart = true;
-    [Range(0.01f, 5)]public float FadeSpeed = 2;
+    [Range(0.01f, 5)] public float FadeSpeed = 2;
     [SerializeField]
     private Texture2D FadeTexture;
 
@@ -68,8 +67,8 @@ public class bl_CameraOrbit : bl_CameraBase
     private float distance = 0;
     private float currentFog = 60;
     private float defaultFog;
-    float horizontal;
-    float vertical;
+    public float horizontal;
+    public float vertical;
     private float defaultAutoSpeed;
     private float lastHorizontal;
     private bool canFogControl = false;
@@ -85,20 +84,17 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void Start()
-    {
+    void Start() {
         SetUp();
     }
 
     /// <summary>
     /// 
     /// </summary>
-    void SetUp()
-    {
+    void SetUp() {
         //SetUp default position for camera
         //For avoid the effect of 'telepor' in the firts movement
-        if (AutoTakeInfo)
-        {
+        if (AutoTakeInfo) {
             distance = Vector3.Distance(transform.position, Target.position);
             Distance = distance;
             Vector3 eulerAngles = Transform.eulerAngles;
@@ -106,9 +102,7 @@ public class bl_CameraOrbit : bl_CameraBase
             y = eulerAngles.x;
             horizontal = x;
             vertical = y;
-        }
-        else
-        {
+        } else {
             distance = Distance;
         }
         currentFog = GetCamera.fieldOfView;
@@ -116,8 +110,7 @@ public class bl_CameraOrbit : bl_CameraBase
         GetCamera.fieldOfView = FogStart;
         defaultAutoSpeed = AutoRotSpeed;
         StartCoroutine(IEDelayFog());
-        if (RotateInputKey == CameraMouseInputType.MobileTouch && FindObjectOfType<bl_OrbitTouchPad>() == null)
-        {
+        if (RotateInputKey == CameraMouseInputType.MobileTouch && FindObjectOfType<bl_OrbitTouchPad>() == null) {
             Debug.LogWarning("For use  mobile touched be sure to put the 'OrbitTouchArea in the canvas of scene");
         }
     }
@@ -125,18 +118,15 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void LateUpdate()
-    {
-        if (Target == null)
-        {
+    void LateUpdate() {
+        if (Target == null) {
             Debug.LogWarning("Target is not assigned to orbit camera!", this);
             return;
         }
         if (isSwitchingTarget)
             return;
 
-        if (CanRotate)
-        {
+        if (CanRotate) {
             //Calculate the distance of camera
             ZoomControll(false);
 
@@ -145,9 +135,7 @@ public class bl_CameraOrbit : bl_CameraBase
 
             //Auto rotate the camera when key is not pressed.
             if (AutoRotate && !isInputKeyRotate) { AutoRotation(); }
-        }
-        else
-        {
+        } else {
             //Calculate the distance of camera
             ZoomControll(true);
         }
@@ -166,28 +154,22 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void InputControl()
-    {
-        if (LockCursorOnRotate && !useKeys)
-        {
-            if (!isForMobile)
-            {
-                if (!isInputKeyRotate && LastHaveInput)
-                {
+    void InputControl() {
+        if (LockCursorOnRotate && !useKeys) {
+            if (!isForMobile) {
+                if (!isInputKeyRotate && LastHaveInput) {
                     if (LockCursorOnRotate && Interact) { bl_CameraUtils.LockCursor(false); }
                     LastHaveInput = false;
                     if (lastHorizontal >= 0) { AutoRotSpeed = OutInputSpeed; } else { AutoRotSpeed = -OutInputSpeed; }
                 }
-                if (isInputKeyRotate && !LastHaveInput)
-                {
+                if (isInputKeyRotate && !LastHaveInput) {
                     if (LockCursorOnRotate && Interact) { bl_CameraUtils.LockCursor(true); }
                     LastHaveInput = true;
                 }
             }
         }
 
-        if (isInputUpKeyRotate)
-        {
+        if (isInputUpKeyRotate) {
             currentFog -= PuwFogAmount;
         }
     }
@@ -195,8 +177,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// Rotate auto when any key is pressed.
     /// </summary>
-    void AutoRotation()
-    {
+    void AutoRotation() {
         AutoRotSpeed = (lastHorizontal > 0) ? Mathf.Lerp(AutoRotSpeed, defaultAutoSpeed, Time.deltaTime / 2) :
         Mathf.Lerp(AutoRotSpeed, -defaultAutoSpeed, Time.deltaTime / 2);
         horizontal += Time.deltaTime * AutoRotSpeed;
@@ -205,8 +186,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void FogControl()
-    {
+    void FogControl() {
         if (!canFogControl)
             return;
 
@@ -216,24 +196,37 @@ public class bl_CameraOrbit : bl_CameraBase
         GetCamera.fieldOfView = Mathf.Lerp(GetCamera.fieldOfView, currentFog, Time.deltaTime * FogLerp);
     }
 
+    private IEnumerator Freeze() {
+
+        float timer = 3f;
+
+        while (timer > 0f) {
+
+            timer -= Time.deltaTime;
+            AutoRotationSpeed = 0f;
+            yield return null;
+
+        }
+
+        AutoRotationSpeed = 10;
+
+    }
 
     /// <summary>
     /// 
     /// </summary>
-    void OrbitControll()
-    {
-        if (m_Interact)
-        {
-            if (!isForMobile)
-            {
-                if (RequieredInput && !useKeys && isInputKeyRotate || !RequieredInput)
-                {
+    void OrbitControll() {
+
+        if (isInputKeyRotate) {
+            if (!isForMobile) {
+                if (RequieredInput && !useKeys && isInputKeyRotate || !RequieredInput) {
                     horizontal += ((SpeedAxis.x * Distance) * InputMultiplier) * AxisX;
                     vertical -= (SpeedAxis.y * InputMultiplier) * AxisY;
                     lastHorizontal = AxisX;
-                }
-                else if (useKeys)
-                {
+                    AutoRotationSpeed = 0f;
+                    StartCoroutine(Freeze());
+
+                } else if (useKeys) {
                     horizontal -= ((KeyAxisX * SpeedAxis.x) * Distance) * InputMultiplier;
                     vertical += (KeyAxisY * SpeedAxis.y) * InputMultiplier;
                     lastHorizontal = KeyAxisX;
@@ -247,11 +240,9 @@ public class bl_CameraOrbit : bl_CameraBase
         x = Mathf.Lerp(x, horizontal, Time.deltaTime * InputLerp);
         y = Mathf.Lerp(y, vertical, Time.deltaTime * InputLerp);
 
-        if (distance > 100)
-        {
+        if (distance > 100) {
             x = x / (distance / (DistanceInfluence * 10));
-            if (horizontal > x)
-            {
+            if (horizontal > x) {
                 horizontal = x;
             }
         }
@@ -266,8 +257,7 @@ public class bl_CameraOrbit : bl_CameraBase
         CurrentPosition = ((CurrentRotation * ZoomVector)) + Target.position;
 
         //swicht in the movement select
-        switch (MovementType)
-        {
+        switch (MovementType) {
             case CameraMovementType.Dynamic:
                 Transform.position = Vector3.Lerp(Transform.position, CurrentPosition, (LerpSpeed) * Time.deltaTime);
                 Transform.rotation = Quaternion.Lerp(Transform.rotation, CurrentRotation, (LerpSpeed * 2) * Time.deltaTime);
@@ -286,38 +276,30 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void ZoomControll(bool autoApply)
-    {
+    void ZoomControll(bool autoApply) {
         //clamp distance and check this.
         distance = Mathf.Clamp(distance - (MouseScrollWheel * ScrollSensitivity), DistanceClamp.x, DistanceClamp.y);
         //Collision detector with a simple raycast
-        if (DetectCollision)
-        {
+        if (DetectCollision) {
             //Calculate direction from target
             Vector3 forward = Transform.position - Target.position;
             //create a ray from transform to target
             Ray = new Ray(Target.position, forward.normalized);
             RaycastHit hit;
             //if ray detect a an obstacle in between the point of origin and the target
-            if (Physics.SphereCast(Ray.origin, CollisionRadius, Ray.direction, out hit, distance))
-            {
+            if (Physics.SphereCast(Ray.origin, CollisionRadius, Ray.direction, out hit, distance)) {
                 if (!haveHit) { LastDistance = distance; haveHit = true; }
                 distance = Mathf.Clamp(hit.distance, DistanceClamp.x, DistanceClamp.y);
                 if (TeleporOnHit) { Distance = distance; }
-            }
-            else
-            {
-                
+            } else {
+
                 StartCoroutine(DetectHit());
             }
             distance = (distance < 1) ? 1 : distance;// distance is recomendable never is least than 1
-            if (!haveHit || !TeleporOnHit)
-            {
+            if (!haveHit || !TeleporOnHit) {
                 Distance = Mathf.SmoothStep(Distance, distance, Time.deltaTime * ZoomSpeed);
             }
-        }
-        else
-        {
+        } else {
             distance = (distance < 1) ? 1 : distance;// distance is recomendable never is least than 1
             Distance = Mathf.SmoothStep(Distance, distance, Time.deltaTime * ZoomSpeed);
         }
@@ -325,14 +307,12 @@ public class bl_CameraOrbit : bl_CameraBase
         //apply distance to vector depth z
         ZoomVector = new Vector3(0f, 0f, -this.Distance);
 
-        if (autoApply)
-        {
+        if (autoApply) {
             //calculate the position and clamp on a circle
             CurrentPosition = ((CurrentRotation * ZoomVector)) + Target.position;
 
             //swicht in the movement select
-            switch (MovementType)
-            {
+            switch (MovementType) {
                 case CameraMovementType.Dynamic:
                     Transform.position = Vector3.Lerp(Transform.position, CurrentPosition, (LerpSpeed) * Time.deltaTime);
                     Transform.rotation = Quaternion.Lerp(Transform.rotation, CurrentRotation, (LerpSpeed * 2) * Time.deltaTime);
@@ -352,12 +332,9 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    private bool isInputKeyRotate
-    {
-        get
-        {
-            switch (RotateInputKey)
-            {
+    private bool isInputKeyRotate {
+        get {
+            switch (RotateInputKey) {
                 case CameraMouseInputType.All:
                     return (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Mouse1) || Input.GetKey(KeyCode.Mouse2) || Input.GetMouseButton(0));
                 case CameraMouseInputType.LeftAndRight:
@@ -379,17 +356,14 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    void OnGUI()
-    {
-        if (isSwitchingTarget)
-        {
+    void OnGUI() {
+        if (isSwitchingTarget) {
             GUI.color = new Color(1, 1, 1, FadeAlpha);
             GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), FadeTexture, ScaleMode.StretchToFill);
             return;
         }
 
-        if (FadeOnStart && FadeAlpha > 0)
-        {
+        if (FadeOnStart && FadeAlpha > 0) {
             FadeAlpha -= Time.deltaTime * FadeSpeed;
             GUI.color = new Color(1, 1, 1, FadeAlpha);
             GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), FadeTexture, ScaleMode.StretchToFill);
@@ -399,12 +373,9 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    private bool isInputUpKeyRotate
-    {
-        get
-        {
-            switch (RotateInputKey)
-            {
+    private bool isInputUpKeyRotate {
+        get {
+            switch (RotateInputKey) {
                 case CameraMouseInputType.All:
                     return (Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyUp(KeyCode.Mouse1) || Input.GetKeyUp(KeyCode.Mouse2) || Input.GetMouseButtonUp(0));
                 case CameraMouseInputType.LeftAndRight:
@@ -427,8 +398,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// Call this function for change the target to orbit
     /// the change will be by a smooth fade effect
     /// </summary>
-    public void SetTarget(Transform newTarget)
-    {
+    public void SetTarget(Transform newTarget) {
         StopCoroutine("TranslateTarget");
         StartCoroutine("TranslateTarget", newTarget);
     }
@@ -436,19 +406,16 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    IEnumerator TranslateTarget(Transform newTarget)
-    {
+    IEnumerator TranslateTarget(Transform newTarget) {
         isSwitchingTarget = true;
-        while (FadeAlpha < 1)
-        {
-            transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3(0, 2, -2), Time.deltaTime );
+        while (FadeAlpha < 1) {
+            transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3(0, 2, -2), Time.deltaTime);
             FadeAlpha += Time.smoothDeltaTime * SwichtSpeed;
             yield return null;
         }
         Target = newTarget;
         isSwitchingTarget = false;
-        while (FadeAlpha > 0)
-        {
+        while (FadeAlpha > 0) {
             FadeAlpha -= Time.smoothDeltaTime * SwichtSpeed;
             yield return null;
         }
@@ -458,8 +425,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// 
     /// </summary>
     /// <returns></returns>
-    IEnumerator DetectHit()
-    {
+    IEnumerator DetectHit() {
         yield return new WaitForSeconds(0.4f);
         if (haveHit) { distance = LastDistance; haveHit = false; }
     }
@@ -468,8 +434,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// 
     /// </summary>
     /// <returns></returns>
-    IEnumerator IEDelayFog()
-    {
+    IEnumerator IEDelayFog() {
         yield return new WaitForSeconds(DelayStartFog);
         canFogControl = true;
     }
@@ -477,14 +442,11 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    public float Horizontal
-    {
-        get
-        {
+    public float Horizontal {
+        get {
             return horizontal;
         }
-        set
-        {
+        set {
             horizontal += value;
             lastHorizontal = horizontal;
         }
@@ -493,14 +455,11 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    public float Vertical
-    {
-        get
-        {
+    public float Vertical {
+        get {
             return vertical;
         }
-        set
-        {
+        set {
             vertical += value;
         }
     }
@@ -508,14 +467,11 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    public bool Interact
-    {
-        get
-        {
+    public bool Interact {
+        get {
             return m_Interact;
         }
-        set
-        {
+        set {
             m_Interact = value;
         }
     }
@@ -523,14 +479,11 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    public bool CanRotate
-    {
-        get
-        {
+    public bool CanRotate {
+        get {
             return m_CanRotate;
         }
-        set
-        {
+        set {
             m_CanRotate = value;
         }
     }
@@ -538,14 +491,11 @@ public class bl_CameraOrbit : bl_CameraBase
     /// <summary>
     /// 
     /// </summary>
-    public float AutoRotationSpeed
-    {
-        get
-        {
+    public float AutoRotationSpeed {
+        get {
             return defaultAutoSpeed;
         }
-        set
-        {
+        set {
             defaultAutoSpeed = value;
         }
     }
@@ -554,8 +504,7 @@ public class bl_CameraOrbit : bl_CameraBase
     /// 
     /// </summary>
     /// <param name="value"></param>
-    public void SetZoom(float value)
-    {
+    public void SetZoom(float value) {
         distance += (-(value * 0.5f) * ScrollSensitivity);
     }
 
@@ -563,19 +512,16 @@ public class bl_CameraOrbit : bl_CameraBase
     /// 
     /// </summary>
     /// <param name="value"></param>
-    public void SetStaticZoom(float value)
-    {
+    public void SetStaticZoom(float value) {
         distance += value;
     }
 
     /// <summary>
     /// 
     /// </summary>
-    void OnDrawGizmosSelected()
-    {
+    void OnDrawGizmosSelected() {
         Gizmos.color = new Color32(0, 221, 221, 255);
-        if (Target != null)
-        {
+        if (Target != null) {
             Gizmos.DrawLine(transform.position, Target.position);
             Gizmos.matrix = Matrix4x4.TRS(Target.position, transform.rotation, new Vector3(1f, 0, 1f));
             Gizmos.DrawWireSphere(Target.position, Distance);
@@ -584,4 +530,23 @@ public class bl_CameraOrbit : bl_CameraBase
         Gizmos.DrawCube(transform.position, new Vector3(1, 0.2f, 0.2f));
         Gizmos.DrawCube(transform.position, Vector3.one / 2);
     }
+
+    public void SetHorizontal(float hor) {
+
+        horizontal = hor;
+
+    }
+
+    public void SetVertical(float ver) {
+
+        vertical = ver;
+
+    }
+
+    public void ToggleAutoRotation(bool state) {
+
+        AutoRotate = state;
+
+    }
+
 }

@@ -172,12 +172,10 @@ public class GameplayManager : MonoBehaviour {
 
         currentPlayerCar.GetComponent<PlayerManager>().canScore = false;
 
-        float totalDriftPoints = currentPlayerCar.GetComponent<PlayerManager>().totalDriftPoints;
-        totalDriftPoints += currentPlayerCar.GetComponent<PlayerManager>().currentDriftPoints;
+        float totalDriftPoints = currentPlayerCar.GetComponent<PlayerManager>().totalPoints;
 
         float currentCoins = currentPlayerCar.GetComponent<PlayerManager>().currentCoins;
         currentCoins += currentPlayerCar.GetComponent<PlayerManager>().currentDriftPoints / 10;
-
         currentPlayerCar.GetComponent<PlayerManager>().currentDriftPoints = 0;
 
         float totalPoints = PlayerPrefs.GetInt("TotalPoints");
@@ -209,6 +207,8 @@ public class GameplayManager : MonoBehaviour {
         if (record)
             RCC.StartStopRecord();
 
+        AdMob.ShowInterstitial();
+
     }
 
     public void Pause() {
@@ -220,10 +220,14 @@ public class GameplayManager : MonoBehaviour {
             Time.timeScale = 1;
             AudioListener.pause = false;
 
+            AdMob.HideBanner();
+
         } else {
 
             Time.timeScale = 0;
             AudioListener.pause = true;
+
+            AdMob.ShowBanner();
 
         }
 
@@ -236,7 +240,8 @@ public class GameplayManager : MonoBehaviour {
 
         print("Quitting");
 
-        //FinishRace ();
+        AdMob.HideBanner();
+
         SceneManager.LoadScene(0);
 
     }
@@ -244,6 +249,8 @@ public class GameplayManager : MonoBehaviour {
     public void Restart() {
 
         print("Restarting");
+
+        AdMob.HideBanner();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
@@ -261,6 +268,8 @@ public class GameplayManager : MonoBehaviour {
         RCC_SceneManager.Instance.activePlayerCamera.useAutoChangeCamera = true;
         RCC_SceneManager.Instance.activePlayerCamera.autoChangeCameraTimer = Random.Range(0f, 10f);
         RCC.StartStopReplay();
+
+        AdMob.ShowBanner();
 
     }
 
