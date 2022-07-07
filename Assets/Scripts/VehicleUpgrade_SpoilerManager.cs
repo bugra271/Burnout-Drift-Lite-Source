@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VehicleUpgrade_SpoilerManager : MonoBehaviour{
+public class VehicleUpgrade_SpoilerManager : MonoBehaviour {
 
     public VehicleUpgrade_Spoiler[] spoiler;
     private int selectedIndex = -1;
@@ -33,9 +33,10 @@ public class VehicleUpgrade_SpoilerManager : MonoBehaviour{
             spoiler[i].gameObject.SetActive(false);
 
         spoiler[index].gameObject.SetActive(true);
+        
+        PlayerPrefs.SetInt(transform.root.name + spoiler[index].transform.name, 1);
+        PlayerPrefs.SetInt(transform.root.name + "SelectedSpoiler", index);
 
-        PlayerPrefs.SetInt(transform.root.name + "SelectedSpoiler", selectedIndex);
-        //print(transform.root.name + "SelectedSpoiler" + selectedIndex);
     }
 
 }

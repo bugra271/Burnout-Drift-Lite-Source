@@ -102,15 +102,16 @@ public class MainMenuManager : MonoBehaviour {
 
     private IEnumerator GoogleMobileAds() {
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.15f);
         AdMob.Init();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         AdMob.RequestBanner();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         AdMob.RequestInterstitial();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         AdMob.RequestRewarded();
-        yield return new WaitForSeconds(1f);
+        AdMobRewardCheck.Instance.tag = "Untagged";
+        yield return new WaitForSeconds(.15f);
         AdMob.ShowBanner();
 
     }

@@ -19,8 +19,6 @@ public class HR_ModificationWheel : MonoBehaviour {
     private Text priceLabel;
     private Image priceImage;
 
-    public PlayerCars.SelectablePlayerCars.CarType type;
-
     void Start() {
 
         button = GetComponent<Button>();
@@ -45,21 +43,6 @@ public class HR_ModificationWheel : MonoBehaviour {
     }
 
     void Update() {
-
-        if (type != PlayerCars.Instance.playerCars[MainMenuManager.Instance.selectedPlayerCarIndex].carType) {
-
-            button.interactable = false;
-
-            if (priceImage.gameObject.activeSelf)
-                priceImage.gameObject.SetActive(false);
-
-            return;
-
-        } else {
-
-            button.interactable = true;
-
-        }
 
         if (wheelPrice <= 0)
             PlayerPrefs.SetInt("OwnedWheel" + wheelIndex, 1);

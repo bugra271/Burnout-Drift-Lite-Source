@@ -22,14 +22,12 @@ public class UI_Spoiler : MonoBehaviour {
 
     public void CheckPurchase() {
 
+        purchased = false;
+
         VehicleUpgrade_SpoilerManager dm = GameObject.FindObjectOfType<VehicleUpgrade_SpoilerManager>();
 
-        if (PlayerPrefs.HasKey(dm.transform.root.name + "SelectedSpoiler")) {
-
-            if (PlayerPrefs.GetInt(dm.transform.root.name + "SelectedSpoiler", -1) == index)
-                purchased = true;
-
-        }
+        if (PlayerPrefs.HasKey(dm.transform.root.name + dm.spoiler[index].transform.name))
+            purchased = true;
 
         if (purchased) {
 

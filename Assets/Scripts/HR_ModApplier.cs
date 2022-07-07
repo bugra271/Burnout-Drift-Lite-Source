@@ -74,10 +74,14 @@ public class HR_ModApplier : MonoBehaviour {
         defMaxBrake = carController.brakeTorque;
 
         if (PlayerPrefs.HasKey (transform.name + "SelectedWheel")) {
+
 			wheelIndex = PlayerPrefs.GetInt (transform.name + "SelectedWheel", 0);
 			selectedWheel = SelectableWheels.Instance.wheels [wheelIndex].wheel;
+
 		} else {
+
 			selectedWheel = null;
+
 		}
 
         _speedLevel = PlayerPrefs.GetInt(transform.name + "SpeedLevel");

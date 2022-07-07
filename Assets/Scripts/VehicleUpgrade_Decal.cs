@@ -15,7 +15,7 @@ public class VehicleUpgrade_Decal : MonoBehaviour{
         decal = GetComponent <EasyDecal > ();
         decalManager = GetComponentInParent<VehicleUpgrade_DecalManager>();
 
-        lastSelected = PlayerPrefs.GetInt(transform.root.name + transform.name, -1);
+        lastSelected = PlayerPrefs.GetInt(transform.root.name + transform.name + "SelectedDecal", -1);
 
         if (lastSelected == -1) {
 
@@ -32,13 +32,13 @@ public class VehicleUpgrade_Decal : MonoBehaviour{
     public void SetDecalMaterial(Material mat) {
 
         decal.DecalMaterial = mat;
-        PlayerPrefs.SetInt(transform.root.name + transform.name, lastSelected);
+        //PlayerPrefs.SetInt(transform.root.name + "Decal", lastSelected);
 
     }
 
     public void Clear() {
 
-        PlayerPrefs.SetInt(transform.root.name + transform.name, -1);
+        PlayerPrefs.SetInt(transform.root.name + transform.name + "SelectedDecal", -1);
         decal.DecalMaterial = decalManager.nullMaterial;
 
     }

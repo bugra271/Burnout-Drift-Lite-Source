@@ -13,21 +13,17 @@ MonoBehaviour:
   m_Name: SelectableWheels
   m_EditorClassIdentifier: 
   wheels:
-  - wheel: {fileID: 1000011647590452, guid: 3c44cdf2ce4e5b643b50a324c7699490, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 18993488774474686, guid: a57c93cd46672ca4e9af33255b0bca7f, type: 3}
     price: 1500
-  - wheel: {fileID: 1000010978205898, guid: c4021b094bdf5ae498467be20388013d, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 186220301698945252, guid: 880a6d3895f196b44882032e8be9627e, type: 3}
     price: 1500
-  - wheel: {fileID: 1000010639464714, guid: 9dd7f2740f67d484d89757650db5052d, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 1432003070784159929, guid: 0aecddb90a2ecac46bd9926e3c0796b9, type: 3}
     price: 1500
-  - wheel: {fileID: 1000010272325198, guid: 77c973f962d58a04a8fcf65c303be756, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 576967304165727640, guid: 3fd8eb6b5ac3214428741b786e3fdb7c, type: 3}
     price: 1500
-  - wheel: {fileID: 1000013675684938, guid: 73679220198dbfe47862e49e5417e779, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 7976047215426121658, guid: 5cada359e66f9c84cb00588bb86059c2, type: 3}
     price: 1500
-  - wheel: {fileID: 1000011332336838, guid: 5c2094fc69a9f9e41bf40836449b7cb5, type: 3}
-    unlocked: 0
+  - wheel: {fileID: 7559199477367740302, guid: 0049cabc42e48de4f98383002852a3f1, type: 3}
+    price: 1500
+  - wheel: {fileID: 8631223660189861696, guid: 8b8187c896e45844ab60724c3031ee58, type: 3}
     price: 1500

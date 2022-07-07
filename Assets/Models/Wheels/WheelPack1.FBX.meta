@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 9fcc621c07d195b4aab23d1c64979318
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel1_Nuts
+    second: {fileID: 2100000, guid: 541bbd2513caf554f99f8b99f63c6783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel1_Rim
+    second: {fileID: 2100000, guid: b26aed0486f85874e810cf18bffc78ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel1_Side
+    second: {fileID: 2100000, guid: fe8df561f2aef5e42ab0cd123c1a167c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel1_Tire
+    second: {fileID: 2100000, guid: 1e7c74193ea4d2a4c9f454bf90c53ae1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel2_Rim
+    second: {fileID: 2100000, guid: a619611a33d4a1841aa6853ad6b485e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel2_Side
+    second: {fileID: 2100000, guid: 1f07297eb84efbb479eddf082cbc8c1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel2_Tire
+    second: {fileID: 2100000, guid: bfeb1a3fd54b7a14c9d3fae649fc3532, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel3_Nuts
+    second: {fileID: 2100000, guid: c4984b8ac1e6df540887ec8422f1a73e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel3_Rim
+    second: {fileID: 2100000, guid: b319c09d151b2334a8701cde2fea14f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel3_Side
+    second: {fileID: 2100000, guid: cf7d319ec9a9e394cbf3e83b0b479e4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel3_Tire
+    second: {fileID: 2100000, guid: ad7ad2aa5e3c67749aa8a1dfa6de07f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel4_Rim
+    second: {fileID: 2100000, guid: a962d1fa6332efe4b9f0eacf80e318f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel4_Side
+    second: {fileID: 2100000, guid: 82c22bd5dc62d2e49b059ad08438649f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel4_Tire
+    second: {fileID: 2100000, guid: 9c13704fb5210a140acc44642aac511b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel5_Nuts
+    second: {fileID: 2100000, guid: df12bba04aae1c04e8a9c55b91bb2eb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel5_Rim
+    second: {fileID: 2100000, guid: 4745be40bcbff5149b15939c1f867602, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel5_Side
+    second: {fileID: 2100000, guid: 8252582705844444ab1d7867e957a7d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel5_Tire
+    second: {fileID: 2100000, guid: 357388ebb6c24d24eae0618d40bc6588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel6_Rim
+    second: {fileID: 2100000, guid: bfb93b08c11d233429dc40414c881085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel6_Side
+    second: {fileID: 2100000, guid: db6636ef4c8a5c74c86781c7d4c021ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel6_Tire
+    second: {fileID: 2100000, guid: a649b1fe9e9713d42b1645c8862f50bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel7_Rim
+    second: {fileID: 2100000, guid: c8faa6699edec7c4088c40b0ed553dbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel7_Side
+    second: {fileID: 2100000, guid: 02f6a9fb084a12f45b5b60e12a4c67b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel7_Tire
+    second: {fileID: 2100000, guid: 511adf8e7e88b594e889b8b44569271f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel8_Nuts
+    second: {fileID: 2100000, guid: 4ebb0b7b666610b46b4d7d79fa4123f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel8_Rim
+    second: {fileID: 2100000, guid: d65f4bb6976412e4eb43ed1e339d4aa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel8_Side
+    second: {fileID: 2100000, guid: 154885f127d8e6044962ff0e817c434d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel8_Tire
+    second: {fileID: 2100000, guid: 947c76898de19bb4786afc5cdc905b72, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.02
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.02
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

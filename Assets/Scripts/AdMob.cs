@@ -170,6 +170,14 @@ public class AdMob {
 
         EligibleReward = true;
 
+#if UNITY_EDITOR
+
+        AdMob.EligibleReward = false;
+        HR_InfoDisplayer.Instance.ShowInfo("Free Diamond Earned!", "You've earned a diamond by watching an ad!", HR_InfoDisplayer.InfoType.Rewarded);
+        BurnoutAPI.AddDiamond(1);
+
+#endif
+
     }
 
 }

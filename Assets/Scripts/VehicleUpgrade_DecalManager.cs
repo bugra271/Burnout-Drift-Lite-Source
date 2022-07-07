@@ -19,7 +19,7 @@ public class VehicleUpgrade_DecalManager : MonoBehaviour{
 
     private IEnumerator Fix() {
 
-        yield return new WaitForFixedUpdate();
+        yield return new WaitForSeconds(1);
 
         for (int i = 0; i < decal.Length; i++) {
 
@@ -38,6 +38,11 @@ public class VehicleUpgrade_DecalManager : MonoBehaviour{
             decal[selectedIndex].Clear();
         else
             decal[selectedIndex].SetDecalMaterial(materials[index]);
+
+        if(index != -1)
+            PlayerPrefs.SetInt(transform.root.name + materials[index].name, 1);
+
+        PlayerPrefs.SetInt(transform.root.name + decal[selectedIndex].transform.name + "SelectedDecal", index);
 
     }
 

@@ -27,9 +27,6 @@ public class PlayerCars : ScriptableObject {
 		public int price;
 		public int diamond;
 
-		public CarType carType;
-		public enum CarType {Racing, Offroad}
-
 	}
 
 	public SelectablePlayerCars[] playerCars;

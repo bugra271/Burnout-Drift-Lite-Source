@@ -22,14 +22,12 @@ public class UI_Siren : MonoBehaviour {
 
     public void CheckPurchase() {
 
+        purchased = false;
+
         VehicleUpgrade_SirenManager dm = GameObject.FindObjectOfType<VehicleUpgrade_SirenManager>();
 
-        if (PlayerPrefs.HasKey(dm.transform.root.name + "SelectedSiren")) {
-
-            if (PlayerPrefs.GetInt(dm.transform.root.name + "SelectedSiren", -1) == index)
-                purchased = true;
-
-        }
+        if (PlayerPrefs.HasKey(dm.transform.root.name + dm.sirens[index].transform.name))
+            purchased = true;
 
         if (purchased) {
 
