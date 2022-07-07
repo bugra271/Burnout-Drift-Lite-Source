@@ -32,9 +32,6 @@ public class MainMenuManager : MonoBehaviour {
     public GameObject shopMenu;
     public GameObject loadingMenu;
 
-    [Header("UI Buttons")]
-    public Button multiplayerButton;
-
     [Header("UI Currency")]
     public Text currencyText;
     public Text diamondsText;

@@ -11,7 +11,7 @@ public class SpeedFlasher : MonoBehaviour {
     public float minSpeed = 100f;
     public float activeTime = 30f;
 
-    public AudioClip audio;
+    public AudioClip SFX;
 
     // Update is called once per frame
     void OnTriggerEnter(Collider col) {
@@ -27,7 +27,7 @@ public class SpeedFlasher : MonoBehaviour {
         animator.SetTrigger("Flash");
         content.SetActive(false);
         player.curSpeedingPonts += points;
-        RCC_Core.NewAudioSource(gameObject, audio.name, 0f, 0f, 1f, audio, false, true, true);
+        RCC_Core.NewAudioSource(gameObject, SFX.name, 0f, 0f, 1f, SFX, false, true, true);
         StartCoroutine(Activate(activeTime));
 
     }

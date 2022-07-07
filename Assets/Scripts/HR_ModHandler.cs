@@ -28,26 +28,6 @@ public class HR_ModHandler : MonoBehaviour {
 	public Button upgradeButton;
 	private Color orgButtonColor;
 
-	//UI Sliders
-	[Header("Power Bars")]
-	public Slider speedBar;
-	public Slider handlingBar;
-	public Slider brakeBar;
-
-	[Header("Maximum Power Bars")]
-	public Slider maxSpeedBar;
-	public Slider maxHandlingBar;
-	public Slider maxBrakeBar;
-
-	//UI Texts
-	[Header("Upgrade Levels Texts")]
-	public Text speedUpgradeLevel;
-	public Text handlingUpgradeLevel;
-	public Text brakeUpgradeLevel;
-	public Text sirenUpgradeLevel;
-	public Text nosUpgradeLevel;
-	public Text turboUpgradeLevel;
-
 	void Awake () {
 
 		orgButtonColor = bodyPaintButton.image.color;
@@ -61,20 +41,6 @@ public class HR_ModHandler : MonoBehaviour {
 
 		if (!currentApplier)
 			return;
-
-		//if (maxSpeedBar)
-		//	maxSpeedBar.value = Mathf.Lerp(maxSpeedBar.value, currentApplier.maxUpgradeSpeed / 350f, Time.deltaTime * 5f);
-		//if (maxHandlingBar)
-		//	maxHandlingBar.value = Mathf.Lerp(maxHandlingBar.value, currentApplier.maxUpgradeHandling / 10f, Time.deltaTime * 5f);
-		//if (maxBrakeBar)
-		//	maxBrakeBar.value = Mathf.Lerp(maxBrakeBar.value, currentApplier.maxUpgradeBrake / 10f, Time.deltaTime * 5f);
-
-		if (speedUpgradeLevel)
-			speedUpgradeLevel.text = currentApplier.speedLevel.ToString("F0");
-		if (handlingUpgradeLevel)
-			handlingUpgradeLevel.text = currentApplier.handlingLevel.ToString("F0");
-		if (brakeUpgradeLevel)
-			brakeUpgradeLevel.text = currentApplier.brakeLevel.ToString("F0");
 
 	}
 

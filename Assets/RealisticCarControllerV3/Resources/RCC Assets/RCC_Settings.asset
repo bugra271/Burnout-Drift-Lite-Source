@@ -119,10 +119,10 @@ MonoBehaviour:
     applyRelativeTorque: 1
     highSpeedSteerAngleMinimum: 5
     highSpeedSteerAngleMaximum: 5
-    highSpeedSteerAngleAtspeedMinimum: 120
-    highSpeedSteerAngleAtspeedMaximum: 120
-    counterSteeringMinimum: 1
-    counterSteeringMaximum: 1
+    highSpeedSteerAngleAtspeedMinimum: 200
+    highSpeedSteerAngleAtspeedMaximum: 200
+    counterSteeringMinimum: 0.5
+    counterSteeringMaximum: 0.5
     steeringSensitivityMinimum: 1
     steeringSensitivityMaximum: 1
     steerHelperAngularVelStrengthMinimum: 0.1

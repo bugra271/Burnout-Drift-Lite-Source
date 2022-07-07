@@ -352,7 +352,7 @@ MonoBehaviour:
   points: 5000
   minSpeed: 80
   activeTime: 30
-  audio: {fileID: 8300000, guid: ca7bb756c9ac96b48ba15e1bf273352b, type: 3}
+  SFX: {fileID: 8300000, guid: ca7bb756c9ac96b48ba15e1bf273352b, type: 3}
 --- !u!54 &8152072971145949005
 Rigidbody:
   m_ObjectHideFlags: 0

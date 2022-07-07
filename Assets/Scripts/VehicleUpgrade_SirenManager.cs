@@ -35,7 +35,7 @@ public class VehicleUpgrade_SirenManager : MonoBehaviour {
         sirens[index].gameObject.SetActive(true);
 
         PlayerPrefs.SetInt(transform.root.name + sirens[index].transform.name, 1);
-        PlayerPrefs.SetInt(transform.root.name + "SelectedSiren", -1);
+        PlayerPrefs.SetInt(transform.root.name + "SelectedSiren", index);
 
     }
 

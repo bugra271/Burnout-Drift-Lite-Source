@@ -441,6 +441,9 @@ public class RCC_Camera : MonoBehaviour {
 
     private void FPS() {
 
+        if (Time.timeScale == 0)
+            return;
+
         // Assigning orbit rotation, and transform rotation.
         if (useOrbitInHoodCameraMode)
             transform.rotation = cameraTarget.playerVehicle.transform.rotation * Quaternion.Euler(orbitY_Smoothed, orbitX_Smoothed, 0f);
@@ -568,8 +571,12 @@ public class RCC_Camera : MonoBehaviour {
         position += Vector3.up * TPSHeight;
 
         //// Look at the target
-        transform.rotation = rotation;
-        transform.position = position;
+        if (Time.timeScale != 0) {
+
+            transform.rotation = rotation;
+            transform.position = position;
+
+        }
 
         // Collision positions and rotations that affects pivot of the camera.
         if (Time.deltaTime != 0) {
