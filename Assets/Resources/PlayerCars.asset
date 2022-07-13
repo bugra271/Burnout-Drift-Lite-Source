@@ -16,20 +16,15 @@ MonoBehaviour:
   - car: {fileID: 365097165828638103, guid: c7d1d4a635014124481f1ac06084fa6e, type: 3}
     price: 5000
     diamond: 0
-    carType: 0
   - car: {fileID: 778687153061378515, guid: 5fb8f8020e9978d4d81d423ce66ca267, type: 3}
     price: 5000
     diamond: 0
-    carType: 0
   - car: {fileID: 3359959761583396119, guid: 61deea3cec259be41a08c35e33ea7ad2, type: 3}
     price: 5000
     diamond: 0
-    carType: 0
   - car: {fileID: 4414730227217021108, guid: 7eea1540b64e26741b42e60c4fa288cb, type: 3}
     price: 0
     diamond: 1
-    carType: 0
   - car: {fileID: 7487529908941499775, guid: 03e72fc0583fa3e4685f0d159347a273, type: 3}
     price: 5000
     diamond: 2
-    carType: 0

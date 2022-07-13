@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5137212072976768704}
   - component: {fileID: 5137212072976768707}
   m_Layer: 0
-  m_Name: Free Cash
+  m_Name: Free Cash (Rewarded Ads)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

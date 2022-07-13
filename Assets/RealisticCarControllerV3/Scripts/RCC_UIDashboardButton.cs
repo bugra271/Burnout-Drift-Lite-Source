@@ -23,6 +23,7 @@ public class RCC_UIDashboardButton : MonoBehaviour, IPointerClickHandler {
 	private Scrollbar gearSlider;
 
 	public int gearDirection = 0;
+	private string orgText;
 
 	public void OnPointerClick(PointerEventData eventData ){
 		
@@ -43,7 +44,14 @@ public class RCC_UIDashboardButton : MonoBehaviour, IPointerClickHandler {
 
 	void OnEnable(){
 
-		Check();
+		if (_buttonType == ButtonType.ABS || _buttonType == ButtonType.ESP || _buttonType == ButtonType.TCS) {
+
+			if (orgText == null)
+				orgText = GetComponentInChildren<Text>().text;
+
+		}
+
+		StartCoroutine(Check());
 
 	}
 	
@@ -219,19 +227,21 @@ public class RCC_UIDashboardButton : MonoBehaviour, IPointerClickHandler {
 			
 		}
 		
-		Check();
+		StartCoroutine(Check());
 		
 	}
 	
-	public void Check(){
+	private IEnumerator Check(){
+
+		yield return new WaitForSeconds(.1f);
 
 		if (!GetComponent<Image> ())
-			return;
+			yield return null;
 
-		if (!RCC_SceneManager.Instance.activePlayerVehicle)
-			return;
-		
-		switch(_buttonType){
+        if (!RCC_SceneManager.Instance.activePlayerVehicle)
+            yield return null;
+
+        switch (_buttonType){
 			
 		case ButtonType.ABS:
 
@@ -278,6 +288,15 @@ public class RCC_UIDashboardButton : MonoBehaviour, IPointerClickHandler {
 			
 			break;
 			
+		}
+
+		if(orgText != null) {
+
+			if (GetComponent<Image>().color == Color.white)
+				GetComponentInChildren<Text>().text = orgText + ": On";
+			else
+				GetComponentInChildren<Text>().text = orgText + ": Off";
+
 		}
 		
 	}

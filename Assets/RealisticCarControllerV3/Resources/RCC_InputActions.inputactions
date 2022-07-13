@@ -11,7 +11,8 @@
                     "id": "90dd0b16-b17c-4e2f-816d-3f6f472fbe4d",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Brake",
@@ -19,7 +20,8 @@
                     "id": "fd45c78a-8d28-433b-938d-216a05e39978",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Steering",
@@ -27,7 +29,8 @@
                     "id": "07554ee5-17d2-4f02-a18b-c167de4685b5",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Handbrake",
@@ -35,7 +38,8 @@
                     "id": "862a1da3-327a-425f-bc3a-c144667b0f07",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Start/Stop Engine",
@@ -43,7 +47,8 @@
                     "id": "665ce79b-380f-460c-954c-a66e8d7f6868",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Low Beam Lights",
@@ -51,7 +56,8 @@
                     "id": "372f474d-e084-434c-8671-5dde678119fc",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "High Beam Lights",
@@ -59,7 +65,8 @@
                     "id": "ce045397-f3db-4d56-a9ab-f15b8d6284f3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Indicator Right",
@@ -67,7 +74,8 @@
                     "id": "a5494e84-44f4-4747-a2bc-8c888e6c6981",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Indicator Left",
@@ -75,7 +83,8 @@
                     "id": "8c0cd9f5-2c12-4dda-867e-68ac4f8d12a7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Indicator Hazard",
@@ -83,7 +92,8 @@
                     "id": "2cf3bd64-7349-45c4-bd17-ac5c026c14f3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Gear Shift Up",
@@ -91,7 +101,8 @@
                     "id": "bfed3200-a183-457f-89e2-4728ba190654",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Gear Shift Down",
@@ -99,7 +110,8 @@
                     "id": "60814594-0217-41d9-be0b-f732e6e15ec1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "NOS",
@@ -107,7 +119,8 @@
                     "id": "724bd134-194c-493a-8539-b6045edcdcd5",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Trailer Detach",
@@ -115,7 +128,8 @@
                     "id": "436e8ef9-e6d5-4264-92e2-aa09d5704ea7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "N Gear",
@@ -123,7 +137,8 @@
                     "id": "c730406c-3f6f-4378-9425-575126e2ffe9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "1stGear",
@@ -131,7 +146,8 @@
                     "id": "faa60fae-83d3-468d-9047-242f9aed211f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "2ndGear",
@@ -139,7 +155,8 @@
                     "id": "065a4580-591d-4266-acf7-9d98d3363a8b",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "3rdGear",
@@ -147,7 +164,8 @@
                     "id": "2406bc0d-f79a-40c9-a124-3bb7e223376d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "4thGear",
@@ -155,7 +173,8 @@
                     "id": "47dc584e-88a1-4fb1-b3a1-a618860c4981",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "5thGear",
@@ -163,7 +182,8 @@
                     "id": "292f9c56-7502-4eb7-8ea9-807f40b45681",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "6thGear",
@@ -171,7 +191,8 @@
                     "id": "72cd6b51-4b79-4956-979a-fead73af3865",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "RGear",
@@ -179,7 +200,8 @@
                     "id": "9586b554-9d81-4d23-9217-bb33ac196bce",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Clutch",
@@ -187,7 +209,8 @@
                     "id": "74b6b726-c60c-461c-b6c3-28e27b55d665",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1204,7 +1227,8 @@
                     "id": "36c3b66b-e716-43bf-8b0f-d41f0459994b",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Change Camera",
@@ -1212,7 +1236,8 @@
                     "id": "bd133a91-3836-4263-8f7d-7ebb0cd992a6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Look Back",
@@ -1220,7 +1245,8 @@
                     "id": "54cd471e-6c0b-42c9-b81c-87833fc3331a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Zoom",
@@ -1228,7 +1254,8 @@
                     "id": "f533f3d2-f07d-4dc7-b0cb-c4446055fdbf",
                     "expectedControlType": "Vector2",
                     "processors": "ScaleVector2(x=0.001,y=0.001),InvertVector2",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1420,7 +1447,8 @@
                     "id": "1b85fbea-08df-4020-9c1d-1dccac44b6e6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Record",
@@ -1428,7 +1456,8 @@
                     "id": "97e1cd85-e655-4c88-99b5-41db78efd038",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Replay",
@@ -1436,32 +1465,11 @@
                     "id": "32a18283-3e10-4e5a-9367-d8d9eade3e78",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "7e7f1b75-4234-4221-9430-5009b0189f41",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard Mouse",
-                    "action": "Record",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "470d0d53-dcb2-4cb0-a5a0-add83c1f0eec",
-                    "path": "<Keyboard>/p",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard Mouse",
-                    "action": "Replay",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "7babc1f5-e42a-4a07-b608-403cd4d3e66e",

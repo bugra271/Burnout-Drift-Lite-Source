@@ -14,11 +14,12 @@ public class HR_ModificationUpgrade : MonoBehaviour {
 
     public UpgradeClass upgradeClass;
     public enum UpgradeClass { Speed, Handling, Brake }
-    public HR_ModApplier applier;
+    [HideInInspector]public HR_ModApplier applier;
 
     public int upgradePrice;
     public bool fullyUpgraded = false;
 
+    public Text levelLabel;
     public Text priceLabel;
     private Image priceImage;
 
@@ -31,6 +32,20 @@ public class HR_ModificationUpgrade : MonoBehaviour {
     void OnEnable() {
 
         applier = GameObject.FindObjectOfType<HR_ModApplier>();
+
+        switch (upgradeClass) {
+
+            case UpgradeClass.Speed:
+                levelLabel.text = applier.speedLevel.ToString();
+                break;
+            case UpgradeClass.Handling:
+                levelLabel.text = applier.handlingLevel.ToString();
+                break;
+            case UpgradeClass.Brake:
+                levelLabel.text = applier.brakeLevel.ToString();
+                break;
+
+        }
 
     }
 
@@ -56,6 +71,7 @@ public class HR_ModificationUpgrade : MonoBehaviour {
                 } else {
                     fullyUpgraded = false;
                 }
+                levelLabel.text = applier.speedLevel.ToString();
                 break;
             case UpgradeClass.Handling:
                 if (applier.handlingLevel >= 5) {
@@ -63,6 +79,7 @@ public class HR_ModificationUpgrade : MonoBehaviour {
                 } else {
                     fullyUpgraded = false;
                 }
+                levelLabel.text = applier.handlingLevel.ToString();
                 break;
             case UpgradeClass.Brake:
                 if (applier.brakeLevel >= 5) {
@@ -70,6 +87,7 @@ public class HR_ModificationUpgrade : MonoBehaviour {
                 } else {
                     fullyUpgraded = false;
                 }
+                levelLabel.text = applier.brakeLevel.ToString();
                 break;
 
         }

@@ -24,16 +24,6 @@ public class ImageEffectsOptions : MonoBehaviour {
 
     public void Check() {
 
-        if (RCC_PlayerPrefsX.GetBool("Shadows", false))
-            QualitySettings.shadows = ShadowQuality.HardOnly;
-        else
-            QualitySettings.shadows = ShadowQuality.Disable;
-
-        if (RCC_PlayerPrefsX.GetBool("LensFlare", true))
-            GetComponent<FlareLayer>().enabled = true;
-        else
-            GetComponent<FlareLayer>().enabled = false;
-
         int drawD = PlayerPrefs.GetInt("DrawDistance", 300);
         Camera.main.farClipPlane = drawD;
 

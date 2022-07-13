@@ -17,7 +17,7 @@ public class UICanvasManager : MonoBehaviour {
 	public GameObject gameOverPanel;
 	public GameObject replayPanel;
 	public GameObject optionsPanel;
-	public GameObject rewardedAdButton;
+	public GameObject assistanceButtons;
 
 	public Text totalPoints;
 	public Text currentPoints;
@@ -85,6 +85,7 @@ public class UICanvasManager : MonoBehaviour {
 	void GameplayManager_OnRacePaused (bool state){
 
 		optionsPanel.SetActive (state);
+		assistanceButtons.SetActive(!state);
 		
 	}
 
@@ -165,17 +166,6 @@ public class UICanvasManager : MonoBehaviour {
 		gameOverPanel.SetActive (true);
 		gamePlayPanel.SetActive (false);
 
-		if (rewardedAdButton) {
-
-			int random = Random.Range (0, 4);
-
-			if (random == 2)
-				rewardedAdButton.SetActive (true);
-			else
-				rewardedAdButton.SetActive (false);
-
-		}
-
 		totalAwardText.text = playerCoins.ToString ("F0");
 
 		List<float> allScores = new List<float> ();
@@ -242,6 +232,7 @@ public class UICanvasManager : MonoBehaviour {
 		canvas.enabled = true;
 		gamePlayPanel.SetActive (true);
 		gameOverPanel.SetActive (false);
+		assistanceButtons.SetActive(true);
 
 		targetScore1.gameObject.SetActive (true);
 		targetScore2.gameObject.SetActive (true);
