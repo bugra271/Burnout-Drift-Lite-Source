@@ -128,10 +128,11 @@ public class PlayerManager : MonoBehaviour {
         if (airTime >= .5f) {
 
             if (!carController.isGrounded)
-                curAirPonts += Time.deltaTime * 100f;
+                curAirPonts += Time.deltaTime * 1000f;
 
         } else {
 
+            currentCoins += Mathf.RoundToInt(curAirPonts / 10f);
             airPoints += curAirPonts;
             curAirPonts = 0f;
 
@@ -140,9 +141,9 @@ public class PlayerManager : MonoBehaviour {
         if (curSpeedingPonts != 0)
             ticketTime -= Time.deltaTime;
         else
-            ticketTime = 3f;
+            ticketTime = 1.5f;
 
-        ticketTime = Mathf.Clamp(ticketTime, 0f, 3f);
+        ticketTime = Mathf.Clamp(ticketTime, 0f, 1.5f);
 
         if (ticketTime > .5f) {
 
@@ -150,6 +151,7 @@ public class PlayerManager : MonoBehaviour {
 
         } else {
 
+            currentCoins += Mathf.RoundToInt(curSpeedingPonts / 10f);
             speedingPoints += curSpeedingPonts;
             curSpeedingPonts = 0f;
 
